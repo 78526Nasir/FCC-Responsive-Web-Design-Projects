@@ -1,0 +1,47 @@
+body{
+    
+    margin-top:20px !important;
+}
+
+.well{
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.06) !important;
+    background-color: #fafafa !important;
+    border-radius: 3px !important;
+}
+.national-desc{
+    padding: 20px 0px;
+}
+  
+.life-timeline{
+    padding: 0px 5%;
+}
+  
+.first-p{
+    padding-bottom: 10px;
+}
+  
+.img-container{
+   background-color: white;
+ 
+}
+
+.first-h2{
+    padding: 20px 0px;
+}
+  
+.main-announcement{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 5%;
+}
+  
+.independent-quote{
+    padding-right: 120px;
+}
+
+@media (max-width:900px){
+    .independent-quote{
+      padding-right:30px;
+    }
+}
