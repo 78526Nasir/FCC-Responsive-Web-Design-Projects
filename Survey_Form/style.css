@@ -1,0 +1,293 @@
+:root{
+    --red:#ff6060;
+    --blue:#007bff;
+    --orange:#ffa505;
+    --violet:#7952b3;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #FFFFFF;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 10px 0px;
+    text-align: center;
+    font-family: 'Roboto',  Calibri;
+}
+
+hr{
+    width: 250px;
+    border: 1px solid var(--violet);
+}
+
+sup{
+    font-size: 10px;
+    color: var(--red);
+}
+
+#top-section{
+    height: 300px;
+    max-height: 300px;
+    width: 100%;
+    background-color: var(--violet);
+}
+
+.container{
+    width:700px;
+    margin: auto;
+    min-height: 1000px;
+    margin-top: -150px;
+    background-color: white; 
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 30px;
+    margin-bottom: 100px;
+    box-sizing: border-box;
+}
+
+#title{
+    text-align: center;
+    font-weight: 500;
+    color:var(--violet);
+}
+
+#description{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 14.5px;
+    line-height: 30px;
+    border-left: 4px solid var(--violet);
+    display: inline-block;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+#tbl{
+    margin: auto;
+    margin-top: 25px;
+}
+
+#tbl td{
+    padding:0 30px;
+}
+
+.field-lbl{
+    font-family: 'Roboto', Calibri;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 200px;
+}
+
+.field-txt, .field-ddl, .field-ta{
+    height: 35px;
+    width: 250px;
+    margin: 10px 0px 10px 20px;
+    border:1px solid #dedede;
+    border-radius: 2px;
+    text-indent: 15px;
+    outline:none;
+    font-family: 'Roboto', Calibri;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.33s ease-in-out;
+}
+
+.field-txt::-webkit-input-placeholder, .field-ddl::-webkit-input-placeholder, .field-ta::-webkit-input-placeholder{
+    color: #bbb;
+}
+
+.field-txt:focus, .field-ddl:focus, .field-ta:focus{
+    border: 1px solid var(--violet);
+    box-shadow: 0 0 0 3px rgba(121, 82, 179, 0.3);
+}
+
+.field-ddl{
+    height: 38px;
+    width: 253px;
+}
+
+/* radio button CSS*/
+
+.radiobtn {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-family: 'Roboto', Calibri;
+    font-weight: 500;
+}
+
+
+.radiobtn input {
+    position: absolute;
+    opacity: 0;
+}
+
+.radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+}
+
+
+.radiobtn:hover input ~ .radio {
+    background-color: #dedede;
+}
+
+.radiobtn input:checked ~ .radio {
+    background-color: var(--violet);
+}
+
+.radio:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radiobtn input:checked ~ .radio:after {
+    display: block;
+}
+
+.radiobtn .radio:after {
+ 	top: 5px;
+	left: 5px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: white;
+}
+
+.ext{
+    position:  absolute;
+    margin-top: -45px;
+}
+
+#r-container{
+    margin: 20px 0px 20px 20px;
+}
+
+/* checkbox CSS*/
+
+#cb-container{
+    margin: 20px 0px;
+}
+
+
+.cb{
+    visibility:hidden;
+    margin-top: 20px;
+}
+
+.cb-lbl{
+    position:  relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    border: 2.4px solid var(--violet);
+    margin-left: -5px;
+    display: inline-block;
+    cursor: pointer;
+    transition:all .4s ease-in-out;
+    background: #ffffff;
+}
+
+.cb-lbl:after{
+    content: '';
+    height: 3px;
+    width: 9px;
+    border: 2px solid black;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    border-right: none;
+    border-top: none;
+    transform: rotate(-45deg);
+    opacity: 0;
+}
+
+.cb-lbl:hover:after{
+    opacity: 0.2;
+}
+
+input:checked+.cb-lbl{
+    background: var(--violet);
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+}
+
+input:checked+.cb-lbl:after{
+    opacity: 1;
+    border-color:white;
+}
+
+.cb-lbl2{
+    position:relative;
+    left:5px;
+    top: -5px;
+    font-family: 'Roboto', Calibri;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.field-ta{
+    height: 100px;
+    text-indent: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none;
+    font-size: 13px;
+}
+
+#submission{
+    display: flex;
+    justify-content: center;
+    margin-top:  30px;
+}
+
+#submit{
+    height: 40px;
+    width: 120px;
+    background: white;
+    border:2px solid var(--violet);
+    border-radius: 3px;
+    font-family: 'Roboto', calibri;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    color: var(--violet);
+    transition: all 0.33s ease-in-out;
+}
+
+#submit:hover{
+    background-color: var(--violet);
+    color:white;
+}
+
+#submit:focus{
+    box-shadow: 0 0 0 3px rgba(121, 82, 179, 0.3);
+}
+
+footer p{
+    font-size: 13px;
+    font-weight: 500;
+    color:#888;
+}
+
+footer a{
+    text-decoration: none;
+    color:#444;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: #000;
+}

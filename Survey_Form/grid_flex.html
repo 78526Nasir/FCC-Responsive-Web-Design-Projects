@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid and Flex tutorials</title>
+
+    <style>
+        .wrapper {
+            width: 450px;
+            margin: auto;
+            margin-top: 100px;
+            height: 400px;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.12);
+            padding: 30px;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-rows: 50px 50px 50px 50px;
+            grid-row-gap: 20px;
+        }
+
+        .f {
+            /* display: flex;
+            flex-direction: row;
+            height: 50px;
+            align-items: center; */
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+        }
+
+        .field-lbl {
+            font-family: 'Roboto', Calibri;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+            width: 200px;
+        }
+
+        .field-txt,
+        .field-ddl,
+        .field-ta {
+            height: 35px;
+            /* width: 250px; */
+            border: 1px solid #dedede;
+            border-radius: 2px;
+            text-indent: 15px;
+            outline: none;
+            font-family: 'Roboto', Calibri;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.33s ease-in-out;
+            /* margin: 0 0 0 auto; */
+        }
+
+        .field-txt::-webkit-input-placeholder,
+        .field-ddl::-webkit-input-placeholder,
+        .field-ta::-webkit-input-placeholder {
+            color: #bbb;
+        }
+
+        .field-txt:focus,
+        .field-ddl:focus,
+        .field-ta:focus {
+            border: 1px solid var(--violet, #7952b3);
+            box-shadow: 0 0 0 3px rgba(121, 82, 179, 0.3);
+        }
+
+        .field-ddl {
+            height: 38px;
+            /* width: 253px; */
+        }
+        .test{
+            outline: none;
+            height: 35px;
+            width: 120px;
+            background: #ffffff;
+            border: 1px solid black;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.33s ease-out;
+        }
+
+        
+        .test:focus{
+            background: #fff;
+            box-shadow:0 0 0 2px #fff, 0 0 0 4px black;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="f">
+            <label id="name-label" class="field-lbl">Name</label>
+            <input class="field-txt" type="text" name="txtName" id="name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="f">
+            <label id="email-label" class="field-lbl">Email</label>
+            <input class="field-txt" type="email" name="txtEmail" id="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="f">
+            <label id="number-label" class="field-lbl">Phone Number</label>
+            <input class="field-txt" type="number" min="14" max="100" name="txtAge" id="number" placeholder="Enter your age" required>
+        </div>
+
+        <div class="f">
+            <label class="field-lbl">Where are you from ?</label>
+            <select id="dropdown" class="field-ddl">
+                <option>Select Country</option>
+                <option>Bangladesh</option>
+                <option>India</option>
+                <option>Nepal</option>
+                <option>Pakistan</option>
+                <option>Malaysia</option>
+            </select>
+        </div>
+        <input type="submit" value="Test" class="test">
+    </div>
+</body>
+
+</html>
